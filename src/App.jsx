@@ -14,6 +14,7 @@ function App() {
   const [openModalAnnouncements, setOpenAnnouncements] = useState(false);
   const [openModalBounty, setOpenBounty] = useState(false);
   const [openModalNavigation, setOpenNavigation] = useState(false);
+  const [openModalAchievements, setOpenAchievements] = useState(false);
   
   return (
       <div className="bg">
@@ -31,7 +32,8 @@ function App() {
             {openModalNavigation && <ClassNavigation openModalBounty={openModalNavigation} setOpenNavigation={setOpenNavigation} />}
             </div>
             <div className="game-col-4">
-              <button className="achievement-select"><img src={achievementShelf} alt="..." width="100%" height="auto" objectFit="contain"></img><Achievements /></button>
+              <button className="achievement-select" onClick={() => {setOpenAchievements(true);}}><img src={achievementShelf} alt="..." width="100%" height="auto" style={{objectFit: 'contain'}}></img></button>
+              {openModalAchievements && <Achievements openModalAchievements={openModalAchievements} setOpenAchievements={setOpenAchievements} />}
             </div>
           </div>
       </div>

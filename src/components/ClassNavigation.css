@@ -11,9 +11,8 @@
     background-image: url(../assets/vintage_old_paper.png);
     /* Center and scale the background image */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
-    
 
 }
 
